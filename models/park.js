@@ -58,8 +58,8 @@ Park.prototype.getTotalVisitorsPerYear = function() {
     return totalVisitors;
 }; 
 
-Park.prototype.GetYearlyRevenue = function () {
-    yearlyRevenue = (getTotalVisitorsPerYear() * 100)
+Park.prototype.getYearlyRevenue = function () {
+    yearlyRevenue = (this.getTotalVisitorsPerYear() * 100)
     return yearlyRevenue
 }
     
