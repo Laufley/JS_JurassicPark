@@ -31,7 +31,7 @@ Park.prototype.mostAttractiveDinosaur = function () {
     return MostPopularDino;
 }
 
-Park.prototype.foundSpecies = function (dinosaur) {
+Park.prototype.findDinosaursBySpecies = function (dinosaur) {
     const sameSpecies = [];
     for (let i = 0; i < this.dinosaurs.length; i++) {
         if (this.dinosaurs[i].species === dinosaur.species) {
@@ -48,5 +48,14 @@ Park.prototype.getTotalVisitorsPerDay = function() {
     }
     return totalVisitors;
 };
-module.exports = Park;
 
+
+Park.prototype.getTotalVisitorsPerYear = function() {
+    let totalVisitors = 0;
+    for (let i = 0; i < this.dinosaurs.length; i++) {
+        totalVisitors += (this.dinosaurs[i].guestsAttractedPerDay * 365);
+    }
+    return totalVisitors;
+};
+
+module.exports = Park;
