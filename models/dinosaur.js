@@ -4,4 +4,4 @@ const Dinosaur = function (species, diet, guestsAttractedPerDay) {
   this.guestsAttractedPerDay = guestsAttractedPerDay;
 }
 
-module.exports = Dinosaur;
+    module.exports = Dinosaur;

@@ -5,9 +5,12 @@ const Dinosaur = require('../models/dinosaur.js');
 describe('Park', function() {
 
   let park;
+  let dinosaur;
 
   beforeEach(function () {
     park = new Park("Jurassic Park", 1000, [])
+    dinosaur1 =  new Dinosaur("Triceratops", "herbivore", 100 )
+    dinosaur2 =  new Dinosaur("T-RageRex", "carnivore", 600 )
   })
 
   it('should have a name', function (){
@@ -31,11 +34,27 @@ describe('Park', function() {
     assert.strictEqual(actual, 1)
   });
   
-  xit('should be able to remove a dinosaur from its collection');
+  it('should be able to remove a dinosaur from its collection', function () {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    park.removeDinosaur(dinosaur2);
+    const expected = [dinosaur1]
+    const actual = park.dinosaurs
+    assert.deepStrictEqual(actual, expected)
+  });
 
-  xit('should be able to find the dinosaur that attracts the most visitors');
+  xit('should be able to find the dinosaur that attracts the most visitors', function () {
+    const actual = dinosaur.mostAttractiveDinosaur();
+    const expected = dinosaur2;
+    assert.deepStrictEqual(actual, dinosaur2)
+  });
 
-  xit('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species');
+    const actual = dinosaur1.foundSpecies();
+    const expected = dinosaur1;
+    assert.deepStrictEqual(actual, expected)
+
+
 
   xit('should be able to calculate the total number of visitors per day');
 
