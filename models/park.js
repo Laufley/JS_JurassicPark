@@ -19,16 +19,16 @@ Park.prototype.removeDinosaur = function (dinosaur) {
 }
 
 Park.prototype.mostAttractiveDinosaur = function () {
-    let MostPopularDino;
-    let BiggestNumOfVisitors = 0;
+    let mostPopularDinosaur;
+    let biggestNumOfVisitors = 0;
 
     for (let i = 0; i < this.dinosaurs.length; i++) {
-        if (this.dinosaurs[i].guestsAttractedPerDay > BiggestNumOfVisitors) {
-            BiggestNumOfVisitors = this.dinosaurs[i].guestsAttractedPerDay;
+        if (this.dinosaurs[i].guestsAttractedPerDay > biggestNumOfVisitors) {
+            biggestNumOfVisitors = this.dinosaurs[i].guestsAttractedPerDay;
             mostPopularDinosaur = this.dinosaurs[i];
         }
     }
-    return MostPopularDino;
+    return mostPopularDinosaur;
 }
 
 Park.prototype.findDinosaursBySpecies = function (dinosaur) {

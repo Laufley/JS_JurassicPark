@@ -49,9 +49,11 @@ describe('Park', function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
+    park.addDinosaur(dinosaur4);
+    
     
     const actual = park.mostAttractiveDinosaur();
-    const expected = dinosaur2;
+    const expected = dinosaur4;
     assert.strictEqual(actual, expected)
   });  //  //[ERR_ASSERTION]: Expected values to be strictly equal: + actual - expected
   // I understand the issues comes from the assert. but I cant spot the mistake.
