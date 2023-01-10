@@ -56,6 +56,11 @@ Park.prototype.getTotalVisitorsPerYear = function() {
         totalVisitors += (this.dinosaurs[i].guestsAttractedPerDay * 365);
     }
     return totalVisitors;
-};
+}; 
 
+Park.prototype.GetYearlyRevenue = function () {
+    yearlyRevenue = (getTotalVisitorsPerYear() * 100)
+    return yearlyRevenue
+}
+    
 module.exports = Park;
