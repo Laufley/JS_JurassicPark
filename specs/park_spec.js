@@ -55,8 +55,7 @@ describe('Park', function() {
     const actual = park.mostAttractiveDinosaur();
     const expected = dinosaur4;
     assert.strictEqual(actual, expected)
-  });  //  //[ERR_ASSERTION]: Expected values to be strictly equal: + actual - expected
-  // I understand the issues comes from the assert. but I cant spot the mistake.
+  });
 
 
   it('should be able to find all dinosaurs of a particular species', function () {
@@ -66,12 +65,9 @@ describe('Park', function() {
     park.addDinosaur(dinosaur4);
     const foundDino = park.findDinosaursBySpecies(dinosaur4);
     const actual = foundDino[0].species;
-    const expected = dinosaur4;
+    const expected = "Diplodoctor";
     assert.strictEqual(actual, expected);
-  }); // Error: AssertionError 
-  //[ERR_ASSERTION]: Expected values to be strictly equal: + actual - expected
-  // I understand the issues comes from the assert. but I cant spot the mistake.
-    
+  });
 
   it('should be able to calculate the total number of visitors per day', function() {
     park.addDinosaur(dinosaur1);
